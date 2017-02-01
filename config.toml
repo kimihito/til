@@ -1,4 +1,4 @@
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Today I learned"
 theme = "hemingway"
 baseurl = "https://kimihito.github.io/til"
