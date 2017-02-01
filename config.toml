@@ -1,0 +1,4 @@
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hemingway"
+baseurl = "https://kimihito.github.io/til"
