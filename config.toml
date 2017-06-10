@@ -19,5 +19,5 @@ url = "https://twitter.com/kimihito_"
 fa_icon = "fa-twitter"
 
 [[params.social]]
-url = "/index.xml"
+url = "/til/index.xml"
 fa_icon = "fa-rss"
