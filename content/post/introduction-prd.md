@@ -18,6 +18,8 @@ tags = ['プロダクトマネジメント', '開発']
 
 にあった。まだまとめてない。
 
+[Examples | Silicon Valley Product Group](http://svpg.com/examples/)にあるっぽい。
+
 # 参考リンク
 
 - [Qiitaにおけるリモートワーク主体の開発プロセス - Qiita](http://qiita.com/takashi/items/39adc590ddb48e5765a6#prd)
