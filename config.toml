@@ -1,4 +1,23 @@
-languageCode = "en-us"
+languageCode = "ja"
 title = "Today I learned"
 theme = "hemingway"
+copyright = "&copy; <a href=\"https://github.com/kimihito\">kimihito</a> 2017"
 baseurl = "https://kimihito.github.io/til"
+
+[params]
+
+[params.highlight]
+style = "github"
+languages = ["go", "dockerfile", "ruby"]
+
+[[params.social]]
+url = "https://github.com/kimihito"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "https://twitter.com/kimihito_"
+fa_icon = "fa-twitter"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
