@@ -1,0 +1,24 @@
+{{ partial "header" . }}
+{{ partial "nav" . }}
+<section class="section">
+  <div class="container">
+    <div class="subtitle is-6 is-pulled-right">
+      {{ if .Params.tags }}
+      {{ partial "tags" .Params.tags }}
+      {{ end }}
+    </div>
+    <h2 class="subtitle is-6">{{ .Date.Format "January 2, 2006" }}</h2>
+    <h1 class="title">{{ .Title }}</h1>
+    <div class="content">
+      {{ .Content }}
+    </div>
+    <hr />
+    <h3 class="subtitle is-6">{{.Site.Params.latest }}</h3>
+    <div class="content">
+      <a href="{{.Site.Params.repourl}}/commit/{{.GitInfo.Hash}}">{{.Lastmod}}</a>
+    </div>
+  </div>
+</section>
+
+{{ partial "disqus" . }}
+{{ partial "footer" . }}
