@@ -7,6 +7,10 @@ build:
   steps:
     - install-packages:
         packages: git
+    - script:
+        name: initialize git submodules
+        code: |
+          git submodule update --init --recursive
     - arjen/hugo-build:
         version: "0.18"
         theme: hemingway

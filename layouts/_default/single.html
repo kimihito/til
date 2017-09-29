@@ -12,11 +12,13 @@
     <div class="content">
       {{ .Content }}
     </div>
-    <h2 class="subtitle is-6">最終更新日</h2>
+    <hr />
+    <h3 class="subtitle is-6">{{.Site.Params.latest }}</h3>
     <div class="content">
       <a href="{{.Site.Params.repourl}}/commit/{{.GitInfo.Hash}}">{{.Lastmod}}</a>
     </div>
   </div>
 </section>
+
 {{ partial "disqus" . }}
 {{ partial "footer" . }}
