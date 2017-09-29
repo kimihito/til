@@ -5,6 +5,8 @@
 box: debian
 build:
   steps:
+    - install-packages:
+        packages: git
     - arjen/hugo-build:
         version: "0.18"
         theme: hemingway

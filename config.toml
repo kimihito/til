@@ -3,8 +3,12 @@ title = "Today I learned"
 theme = "hemingway"
 copyright = "&copy; <a href=\"https://github.com/kimihito\">kimihito</a> 2017"
 baseurl = "https://kimihito.github.io/til"
+enableGitInfo = true
+
 
 [params]
+repourl = "https://github.com/kimihito/til/"
+latest = "最終更新日"
 
 [params.highlight]
 style = "github"
