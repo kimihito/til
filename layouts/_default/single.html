@@ -13,10 +13,12 @@
       {{ .Content }}
     </div>
     <hr />
+    {{ if (isset . .GitInfo) }}
     <h3 class="subtitle is-6">{{.Site.Params.latest }}</h3>
     <div class="content">
       <a href="{{.Site.Params.repourl}}/commit/{{.GitInfo.Hash}}">{{.Lastmod}}</a>
     </div>
+    {{ end }}
   </div>
 </section>
 
