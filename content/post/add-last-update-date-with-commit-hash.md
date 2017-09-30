@@ -23,15 +23,15 @@ enableGitInfo = true
 
 ```html
 
-{{ if (isset . .GitInfo)}}
-  <h3 class="subtitle is-6">{{.Site.Params.latest }}</h3>
+{{ with .GitInfo }}
+  <h3 class="subtitle is-6">{{$.Page.Site.Params.latest}}</h3>
   <div class="content">
-    <a href="{{.Site.Params.repourl}}/commit/{{.GitInfo.Hash}}">{{.Lastmod}}</a>
+    <a href="{{$.Page.Site.Params.repourl}}/commit/{{.GitInfo.Hash}}">{{$.Page.Lastmod}}</a>
   </div>
 {{ end }}
 ```
 
-と書きました。(`.Site.Params.repourl`にはGitHubのURLを入れています)
+と書きました。(`$.Page.Site.Params.repourl`にはGitHubのURLを入れています)
 
 
 ## ハマったこと
