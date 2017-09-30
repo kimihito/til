@@ -41,7 +41,7 @@ enableGitInfo = true
 
 新しく作った投稿にはコミットハッシュがないため、`.GitInfo`が取得できないというエラーが出て`hugo server`を利用したプレビューが表示されません。
 
-これを回避するために、`if (isset . .GitInfo)` を追加して、`.GitInfo`がある場合のみ表示するようにしました。
+これを回避するために、`with .GitInfo` を追加して、`.GitInfo`がある場合のみ表示するようにしました。
 
 ### wercker経由でのデプロイに失敗する
 
