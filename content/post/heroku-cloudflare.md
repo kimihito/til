@@ -1,9 +1,9 @@
----
-title: "HerokuでCloudflareを使う"
-date: 2018-05-25T13:26:20+09:00
-tags: ["Heroku", "Cloudflare", "pointDNS"]
-draft: False
----
++++
+title = "HerokuでCloudflareを使う"
+date = 2018-05-25T13:26:20+09:00
+tags = ["Heroku", "Cloudflare", "pointDNS"]
+draft =  false
++++
 
 # HerokuでCloudflareを使う
 
