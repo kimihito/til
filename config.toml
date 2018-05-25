@@ -1,4 +1,5 @@
 languageCode = "ja"
+hasCJKLanguage = true
 title = "Today I learned"
 theme = "hemingway"
 copyright = "&copy; <a href=\"https://kimihito.net/\">kimihito</a> 2018"
