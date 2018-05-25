@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minitest on Today I learned</title>
+    <link>https://til.kimihito.net/tags/minitest/</link>
+    <description>Recent content in Minitest on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://kimihito.net/&#34;&gt;kimihito&lt;/a&gt; 2018</copyright>
+    <lastBuildDate>Sat, 04 Feb 2017 20:02:34 +0900</lastBuildDate>
+    
+	<atom:link href="https://til.kimihito.net/tags/minitest/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Minitestのインテグレーションテストでメールの送信テストをしたい</title>
+      <link>https://til.kimihito.net/post/send-email-in-action-dispatch-integration-test/</link>
+      <pubDate>Sat, 04 Feb 2017 20:02:34 +0900</pubDate>
+      
+      <guid>https://til.kimihito.net/post/send-email-in-action-dispatch-integration-test/</guid>
+      <description>やりたいこと Minitestを利用したインテグレーションテストでメールが送信されているかをテストしたかったが、動作していなかった。 やったこと</description>
+    </item>
+    
+  </channel>
+</rss>

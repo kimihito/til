@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>開発 on Today I learned</title>
+    <link>https://til.kimihito.net/tags/%E9%96%8B%E7%99%BA/</link>
+    <description>Recent content in 開発 on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://kimihito.net/&#34;&gt;kimihito&lt;/a&gt; 2018</copyright>
+    <lastBuildDate>Sat, 04 Feb 2017 16:03:25 +0900</lastBuildDate>
+    
+	<atom:link href="https://til.kimihito.net/tags/%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Product Requirements Documentについて</title>
+      <link>https://til.kimihito.net/post/introduction-prd/</link>
+      <pubDate>Sat, 04 Feb 2017 16:03:25 +0900</pubDate>
+      
+      <guid>https://til.kimihito.net/post/introduction-prd/</guid>
+      <description>Product Requirements Document プロダクトをどういう製品にするのか、そのプロダクトが存在する目的などを定義するドキュメント 参考リンクにあるProduct HuntのPR</description>
+    </item>
+    
+  </channel>
+</rss>

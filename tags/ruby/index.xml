@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Today I learned</title>
+    <link>https://til.kimihito.net/tags/ruby/</link>
+    <description>Recent content in Ruby on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://kimihito.net/&#34;&gt;kimihito&lt;/a&gt; 2018</copyright>
+    <lastBuildDate>Thu, 02 Feb 2017 17:31:12 +0900</lastBuildDate>
+    
+	<atom:link href="https://til.kimihito.net/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hanamiで使う認証のメモ</title>
+      <link>https://til.kimihito.net/post/hanami-authentication/</link>
+      <pubDate>Thu, 02 Feb 2017 17:31:12 +0900</pubDate>
+      
+      <guid>https://til.kimihito.net/post/hanami-authentication/</guid>
+      <description>結局 omniauth-*** を使った。 ossboard-org/ossboard: Public board for oss issues and mentoringを参考にして作った Hanamirbのコミッターっぽい@davydovantonが認証系のda</description>
+    </item>
+    
+    <item>
+      <title>Hanamirbに入門するためのメモ</title>
+      <link>https://til.kimihito.net/post/introduction-hanamirb/</link>
+      <pubDate>Wed, 01 Feb 2017 21:57:31 +0900</pubDate>
+      
+      <guid>https://til.kimihito.net/post/introduction-hanamirb/</guid>
+      <description>Hanami | Guides - Architectures: Container Clean Architecture Monolith First がメイン 資料 公式サイト Getting Started Rails vs Hanami y-yagiさんの資料 awesome-hanami http://www.ossboard.org/ Hanamiで作られている。ソースコード 自分で書いたHanam</description>
+    </item>
+    
+  </channel>
+</rss>
