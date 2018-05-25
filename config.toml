@@ -2,7 +2,7 @@ languageCode = "ja"
 title = "Today I learned"
 theme = "hemingway"
 copyright = "&copy; <a href=\"https://kimihito.net/\">kimihito</a> 2018"
-baseurl = "http://til.kimihito.net/"
+baseurl = "https://til.kimihito.net/"
 enableGitInfo = true
 
 
