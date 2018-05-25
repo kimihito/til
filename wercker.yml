@@ -19,7 +19,8 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - lukevivier/gh-pages@0.2.1:
+    - lukevivier/gh-pages:
+        domain: til.kimihito.net
         token: $GIT_TOKEN
         basedir: public
 

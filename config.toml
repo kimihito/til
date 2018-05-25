@@ -1,7 +1,7 @@
 languageCode = "ja"
 title = "Today I learned"
 theme = "hemingway"
-copyright = "&copy; <a href=\"https://github.com/kimihito\">kimihito</a> 2017"
+copyright = "&copy; <a href=\"https://github.com/kimihito\">kimihito</a> 2018"
 baseurl = "https://kimihito.github.io/til"
 enableGitInfo = true
 
