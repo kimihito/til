@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Today I learned</title>
+    <link>https://kimihito.github.io/til/post/</link>
+    <description>Recent content in Posts on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/kimihito&#34;&gt;kimihito&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Fri, 25 May 2018 13:26:20 +0900</lastBuildDate>
+    
+	<atom:link href="https://kimihito.github.io/til/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HerokuでCloudflareを使う</title>
+      <link>https://kimihito.github.io/til/post/heroku-cloudflare/</link>
+      <pubDate>Fri, 25 May 2018 13:26:20 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/heroku-cloudflare/</guid>
+      <description> HerokuでCloudflareを使う 経緯  個人で作っているサービスのコストを減らしたい。
+ 【完全無料】Herokuで独自ドメイン + HTTPSに対応する【Rails】 - Qiita を見つけたので試してみようと思った
+  やったこと  pointDNSを使っていたのでアドオンを解除 Herokuの有料プランから無料へ Configure Cloudflare and Heroku over HTTPS – Cloudflare Support の通りに作業をする  はまったこと 1 ~ 3 までの手順でやった上でアクセスしても動かなかったけど、ほっといたら動くようになっていた。
+参考にしたサイト  Configure Cloudflare and Heroku over HTTPS – Cloudflare Support  </description>
+    </item>
+    
+    <item>
+      <title>Hugofyから投稿のテスト</title>
+      <link>https://kimihito.github.io/til/post/hugofy/</link>
+      <pubDate>Sun, 28 Jan 2018 22:38:45 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/hugofy/</guid>
+      <description>https://gohugo.io/tools/editors/ にあった、 hugofyを入れてみてからのテスト。
+まぁ実際そうかという感じだけど、該当するHugoのディレクトリでしか実行できない。</description>
+    </item>
+    
+    <item>
+      <title>Hugoで記事に最終更新日とそのコミットを表示する</title>
+      <link>https://kimihito.github.io/til/post/add-last-update-date-with-commit-hash/</link>
+      <pubDate>Sat, 30 Sep 2017 15:08:11 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/add-last-update-date-with-commit-hash/</guid>
+      <description>最初に投稿したあとに、更新することもあるのでそのコミットログと、いつの更新だったかを把握できるようにしたかった。
+すでにHugoにはGitの情報を取得できる変数があったGitの情報を取得できる変数があるのでそれを利用する。
+有効にする方法は、 config.toml に
+enableGitInfo = true  と書くと有効になります。
+また、最終更新日の表示は、Page Variablesの .Lastmod が利用できます。
+今回その2つを利用して、
+{{ with .GitInfo }} &amp;lt;h3 class=&amp;quot;subtitle is-6&amp;quot;&amp;gt;{{$.Page.Site.Params.latest}}&amp;lt;/h3&amp;gt; &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;{{$.Page.Site.Params.repourl}}/commit/{{.GitInfo.Hash}}&amp;quot;&amp;gt;{{$.Page.Lastmod}}&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; {{ end }}  と書きました。($.Page.Site.Params.repourlにはGitHubのURLを入れています)
+ハマったこと コミットのない投稿のプレビューができない 新しく作った投稿にはコミットハッシュがないため、.GitInfoが取得できないというエラーが出てhugo serverを利用したプレビューが表示されません。
+これを回避するために、with .GitInfo を追加して、.GitInfoがある場合のみ表示するようにしました。
+wercker経由でのデプロイに失敗する このサイトは、werckerを利用してGitHub Pages上にデプロイしています。
+Hugoのビルドは、arjen/hugo-buildを利用しています。
+.GitInfo を利用するにあたって、gitinfo.go:39: Got error reading Git log: Git executable not found in $PATH というエラーが出ていました。
+解決方法としては、
+steps: - install-packages: packages: git - arjen/hugo-build: version: &amp;quot;0.18&amp;quot; theme: hemingway flags: --buildDrafts=true  というように、arjen/hugo-buildを利用する前にgitをインストールすることで対処できました。</description>
+    </item>
+    
+    <item>
+      <title>Railsのアプリをリネームしたい</title>
+      <link>https://kimihito.github.io/til/post/rename-rails-app/</link>
+      <pubDate>Fri, 24 Feb 2017 16:31:09 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/rename-rails-app/</guid>
+      <description>morshedalam/rename: To rename rails application をいれて、bundle install
+その後
+rails g rename:app_to 変えたい名前  で変わります。Rails.application.config.session_store も変わっちゃうっぽい。
+なぜかREADMEだと上記のコマンドが書いてなかった。</description>
+    </item>
+    
+    <item>
+      <title>Minitestのインテグレーションテストでメールの送信テストをしたい</title>
+      <link>https://kimihito.github.io/til/post/send-email-in-action-dispatch-integration-test/</link>
+      <pubDate>Sat, 04 Feb 2017 20:02:34 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/send-email-in-action-dispatch-integration-test/</guid>
+      <description> やりたいこと Minitestを利用したインテグレーションテストでメールが送信されているかをテストしたかったが、動作していなかった。
+やったこと test/test_helper.rb に以下を追加したところメールの動作テストができた
+ActionMailer::Base.delivery_method = :test  </description>
+    </item>
+    
+    <item>
+      <title>Product Requirements Documentについて</title>
+      <link>https://kimihito.github.io/til/post/introduction-prd/</link>
+      <pubDate>Sat, 04 Feb 2017 16:03:25 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/introduction-prd/</guid>
+      <description> Product Requirements Document プロダクトをどういう製品にするのか、そのプロダクトが存在する目的などを定義するドキュメント
+参考リンクにあるProduct HuntのPRDは具体的で参考になった
+どういう書式が良いか ハイフィデリティプロトタイプ 第18章　製品仕様はどうあるべきかを考える | Inspired日本語版で紹介されている方式
+にあった。まだまとめてない。
+Examples | Silicon Valley Product Groupにあるっぽい。
+参考リンク  Qiitaにおけるリモートワーク主体の開発プロセス - Qiita Product Requirements Document(=PRD, 製品要求仕様書) - Tbpgr Blog 第11章　製品の市場性評価 | Inspired日本語版 第18章　製品仕様はどうあるべきかを考える | Inspired日本語版 Product HuntのPRD  </description>
+    </item>
+    
+    <item>
+      <title>Hanamiで使う認証のメモ</title>
+      <link>https://kimihito.github.io/til/post/hanami-authentication/</link>
+      <pubDate>Thu, 02 Feb 2017 17:31:12 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/hanami-authentication/</guid>
+      <description>結局 omniauth-*** を使った。
+ossboard-org/ossboard: Public board for oss issues and mentoringを参考にして作った
+Hanamirbのコミッターっぽい@davydovantonが認証系のdavydovanton/hanami-auth: Prototype for hanami auth (bad way)を作っていたっぽいのは観測しているけどうーむ。
+Railsに馴染みすぎてるせいか、どうしてもRailsで考えてしまう。</description>
+    </item>
+    
+    <item>
+      <title>Hanamirbに入門するためのメモ</title>
+      <link>https://kimihito.github.io/til/post/introduction-hanamirb/</link>
+      <pubDate>Wed, 01 Feb 2017 21:57:31 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/introduction-hanamirb/</guid>
+      <description> Hanami | Guides - Architectures: Container
+Clean Architecture Monolith First
+がメイン
+資料  公式サイト Getting Started Rails vs Hanami y-yagiさんの資料 awesome-hanami http://www.ossboard.org/  Hanamiで作られている。ソースコード 自分で書いたHanamirbでのアプリでもこの実装を参考にした。   </description>
+    </item>
+    
+    <item>
+      <title>HugoをGitHub Pagesで動かす</title>
+      <link>https://kimihito.github.io/til/post/hello-hugo/</link>
+      <pubDate>Tue, 31 Jan 2017 22:59:05 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/hello-hugo/</guid>
+      <description> 参考 Hugo - Automated deployments with Wercker
+だいたいはここに従ったとおりにやった。
+使用したテーマ tanksuzuki/hemingway: Really minimal blog theme for hugo.
+h1 が # として表示されたりしているのが好きなので選択した。
+ハマったところ  テーマが git init に含まれてなかったので表示されなかった。
+ tanksuzuki/hemingway が Hugo 0.16から？じゃないと対応していないとのログが出たので、バージョンをあげた
+  </description>
+    </item>
+    
+  </channel>
+</rss>

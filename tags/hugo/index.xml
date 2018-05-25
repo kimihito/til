@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Today I learned</title>
+    <link>https://kimihito.github.io/til/tags/hugo/</link>
+    <description>Recent content in Hugo on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/kimihito&#34;&gt;kimihito&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Sun, 28 Jan 2018 22:38:45 +0900</lastBuildDate>
+    
+	<atom:link href="https://kimihito.github.io/til/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugofyから投稿のテスト</title>
+      <link>https://kimihito.github.io/til/post/hugofy/</link>
+      <pubDate>Sun, 28 Jan 2018 22:38:45 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/hugofy/</guid>
+      <description>https://gohugo.io/tools/editors/ にあった、 hugofyを入れてみてからのテスト。
+まぁ実際そうかという感じだけど、該当するHugoのディレクトリでしか実行できない。</description>
+    </item>
+    
+    <item>
+      <title>Hugoで記事に最終更新日とそのコミットを表示する</title>
+      <link>https://kimihito.github.io/til/post/add-last-update-date-with-commit-hash/</link>
+      <pubDate>Sat, 30 Sep 2017 15:08:11 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/add-last-update-date-with-commit-hash/</guid>
+      <description>最初に投稿したあとに、更新することもあるのでそのコミットログと、いつの更新だったかを把握できるようにしたかった。
+すでにHugoにはGitの情報を取得できる変数があったGitの情報を取得できる変数があるのでそれを利用する。
+有効にする方法は、 config.toml に
+enableGitInfo = true  と書くと有効になります。
+また、最終更新日の表示は、Page Variablesの .Lastmod が利用できます。
+今回その2つを利用して、
+{{ with .GitInfo }} &amp;lt;h3 class=&amp;quot;subtitle is-6&amp;quot;&amp;gt;{{$.Page.Site.Params.latest}}&amp;lt;/h3&amp;gt; &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; &amp;lt;a href=&amp;quot;{{$.Page.Site.Params.repourl}}/commit/{{.GitInfo.Hash}}&amp;quot;&amp;gt;{{$.Page.Lastmod}}&amp;lt;/a&amp;gt; &amp;lt;/div&amp;gt; {{ end }}  と書きました。($.Page.Site.Params.repourlにはGitHubのURLを入れています)
+ハマったこと コミットのない投稿のプレビューができない 新しく作った投稿にはコミットハッシュがないため、.GitInfoが取得できないというエラーが出てhugo serverを利用したプレビューが表示されません。
+これを回避するために、with .GitInfo を追加して、.GitInfoがある場合のみ表示するようにしました。
+wercker経由でのデプロイに失敗する このサイトは、werckerを利用してGitHub Pages上にデプロイしています。
+Hugoのビルドは、arjen/hugo-buildを利用しています。
+.GitInfo を利用するにあたって、gitinfo.go:39: Got error reading Git log: Git executable not found in $PATH というエラーが出ていました。
+解決方法としては、
+steps: - install-packages: packages: git - arjen/hugo-build: version: &amp;quot;0.18&amp;quot; theme: hemingway flags: --buildDrafts=true  というように、arjen/hugo-buildを利用する前にgitをインストールすることで対処できました。</description>
+    </item>
+    
+    <item>
+      <title>HugoをGitHub Pagesで動かす</title>
+      <link>https://kimihito.github.io/til/post/hello-hugo/</link>
+      <pubDate>Tue, 31 Jan 2017 22:59:05 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/hello-hugo/</guid>
+      <description> 参考 Hugo - Automated deployments with Wercker
+だいたいはここに従ったとおりにやった。
+使用したテーマ tanksuzuki/hemingway: Really minimal blog theme for hugo.
+h1 が # として表示されたりしているのが好きなので選択した。
+ハマったところ  テーマが git init に含まれてなかったので表示されなかった。
+ tanksuzuki/hemingway が Hugo 0.16から？じゃないと対応していないとのログが出たので、バージョンをあげた
+  </description>
+    </item>
+    
+  </channel>
+</rss>

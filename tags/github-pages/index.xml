@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github Pages on Today I learned</title>
+    <link>https://kimihito.github.io/til/tags/github-pages/</link>
+    <description>Recent content in Github Pages on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/kimihito&#34;&gt;kimihito&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Tue, 31 Jan 2017 22:59:05 +0900</lastBuildDate>
+    
+	<atom:link href="https://kimihito.github.io/til/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HugoをGitHub Pagesで動かす</title>
+      <link>https://kimihito.github.io/til/post/hello-hugo/</link>
+      <pubDate>Tue, 31 Jan 2017 22:59:05 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/hello-hugo/</guid>
+      <description> 参考 Hugo - Automated deployments with Wercker
+だいたいはここに従ったとおりにやった。
+使用したテーマ tanksuzuki/hemingway: Really minimal blog theme for hugo.
+h1 が # として表示されたりしているのが好きなので選択した。
+ハマったところ  テーマが git init に含まれてなかったので表示されなかった。
+ tanksuzuki/hemingway が Hugo 0.16から？じゃないと対応していないとのログが出たので、バージョンをあげた
+  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloudflare on Today I learned</title>
+    <link>https://kimihito.github.io/til/tags/cloudflare/</link>
+    <description>Recent content in Cloudflare on Today I learned</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; &lt;a href=&#34;https://github.com/kimihito&#34;&gt;kimihito&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Fri, 25 May 2018 13:26:20 +0900</lastBuildDate>
+    
+	<atom:link href="https://kimihito.github.io/til/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HerokuでCloudflareを使う</title>
+      <link>https://kimihito.github.io/til/post/heroku-cloudflare/</link>
+      <pubDate>Fri, 25 May 2018 13:26:20 +0900</pubDate>
+      
+      <guid>https://kimihito.github.io/til/post/heroku-cloudflare/</guid>
+      <description> HerokuでCloudflareを使う 経緯  個人で作っているサービスのコストを減らしたい。
+ 【完全無料】Herokuで独自ドメイン + HTTPSに対応する【Rails】 - Qiita を見つけたので試してみようと思った
+  やったこと  pointDNSを使っていたのでアドオンを解除 Herokuの有料プランから無料へ Configure Cloudflare and Heroku over HTTPS – Cloudflare Support の通りに作業をする  はまったこと 1 ~ 3 までの手順でやった上でアクセスしても動かなかったけど、ほっといたら動くようになっていた。
+参考にしたサイト  Configure Cloudflare and Heroku over HTTPS – Cloudflare Support  </description>
+    </item>
+    
+  </channel>
+</rss>
