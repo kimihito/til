@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on Today I learned</title>
-    <link>https://til.kimihito.net/categories/</link>
-    <description>Recent content in Categories on Today I learned</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <copyright>&amp;copy; &lt;a href=&#34;https://kimihito.net/&#34;&gt;kimihito&lt;/a&gt; 2018</copyright>
-    
-	<atom:link href="https://til.kimihito.net/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Today I learned</title><link>https://til.kimihito.net/categories/</link><description>Recent content in Categories on Today I learned</description><generator>Hugo -- gohugo.io</generator><language>ja</language><copyright>&amp;copy; &lt;a href="https://kimihito.net/">kimihito&lt;/a> 2018</copyright><atom:link href="https://til.kimihito.net/categories/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

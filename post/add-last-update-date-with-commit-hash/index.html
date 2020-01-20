@@ -1,147 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hugoで記事に最終更新日とそのコミットを表示する | Today I learned</title>
-<link rel="stylesheet" href="https://til.kimihito.net//css/style.css">
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
-
-
-<section class="section">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="nav-item" href="https://til.kimihito.net/"><h1 class="title is-4">Today I learned</h1></a>
-      </div>
-      <div class="nav-right">
-        <nav class="nav-item level is-mobile">
-          
-          <a class="level-item" href="https://github.com/kimihito">
-            <span class="icon">
-              <i class="fa fa-github"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="https://twitter.com/kimihito_">
-            <span class="icon">
-              <i class="fa fa-twitter"></i>
-            </span>
-          </a>
-          
-          <a class="level-item" href="/index.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-          </a>
-          
-        </nav>
-      </div>
-    </nav>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="subtitle is-6 is-pulled-right">
-      
-      
-  <a class="subtitle is-6" href="/tags/hugo">#Hugo</a>
-
-
-
-  <a class="subtitle is-6" href="/tags/wercker">#wercker</a>
-
-
-      
-    </div>
-    <h2 class="subtitle is-6">September 30, 2017</h2>
-    <h1 class="title">Hugoで記事に最終更新日とそのコミットを表示する</h1>
-    <div class="content">
-      
-
-<p>最初に投稿したあとに、更新することもあるのでそのコミットログと、いつの更新だったかを把握できるようにしたかった。</p>
-
-<p>すでにHugoには<a href="https://gohugo.io/variables/git/">Gitの情報を取得できる変数があった</a>Gitの情報を取得できる変数があるのでそれを利用する。</p>
-
-<p>有効にする方法は、 <code>config.toml</code> に</p>
-
-<pre><code class="language-toml">enableGitInfo = true
-</code></pre>
-
-<p>と書くと有効になります。</p>
-
-<p>また、最終更新日の表示は、<a href="https://gohugo.io/variables/page/#page-variables">Page Variables</a>の <code>.Lastmod</code> が利用できます。</p>
-
-<p>今回その2つを利用して、</p>
-
-<pre><code class="language-html">
+<!doctype html><html lang=ja><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Hugoで記事に最終更新日とそのコミットを表示する | Today I learned</title><link rel=stylesheet href=https://til.kimihito.net//css/style.css><link rel=stylesheet href=//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css><link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css><section class=section><div class=container><nav class=nav><div class=nav-left><a class=nav-item href=https://til.kimihito.net/><h1 class="title is-4">Today I learned</h1></a></div><div class=nav-right><nav class="nav-item level is-mobile"><a class=level-item href=https://github.com/kimihito><span class=icon><i class="fa fa-github"></i></span></a><a class=level-item href=https://twitter.com/kimihito_><span class=icon><i class="fa fa-twitter"></i></span></a><a class=level-item href=/index.xml><span class=icon><i class="fa fa-rss"></i></span></a></nav></div></nav></div></section><section class=section><div class=container><div class="subtitle is-6 is-pulled-right"><a class="subtitle is-6" href=/tags/hugo>#Hugo</a>
+<a class="subtitle is-6" href=/tags/wercker>#wercker</a></div><h2 class="subtitle is-6">September 30, 2017</h2><h1 class=title>Hugoで記事に最終更新日とそのコミットを表示する</h1><div class=content><p>最初に投稿したあとに、更新することもあるのでそのコミットログと、いつの更新だったかを把握できるようにしたかった。</p><p>すでにHugoには<a href=https://gohugo.io/variables/git/>Gitの情報を取得できる変数があった</a>Gitの情報を取得できる変数があるのでそれを利用する。</p><p>有効にする方法は、 <code>config.toml</code> に</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=color:#a6e22e>enableGitInfo</span> = <span style=color:#66d9ef>true</span>
+</code></pre></div><p>と書くと有効になります。</p><p>また、最終更新日の表示は、<a href=https://gohugo.io/variables/page/#page-variables>Page Variables</a>の <code>.Lastmod</code> が利用できます。</p><p>今回その2つを利用して、</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>
 {{ with .GitInfo }}
-  &lt;h3 class=&quot;subtitle is-6&quot;&gt;{{$.Page.Site.Params.latest}}&lt;/h3&gt;
-  &lt;div class=&quot;content&quot;&gt;
-    &lt;a href=&quot;{{$.Page.Site.Params.repourl}}/commit/{{.GitInfo.Hash}}&quot;&gt;{{$.Page.Lastmod}}&lt;/a&gt;
-  &lt;/div&gt;
+  &lt;<span style=color:#f92672>h3</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;subtitle is-6&#34;</span>&gt;{{$.Page.Site.Params.latest}}&lt;/<span style=color:#f92672>h3</span>&gt;
+  &lt;<span style=color:#f92672>div</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;content&#34;</span>&gt;
+    &lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{{$.Page.Site.Params.repourl}}/commit/{{.GitInfo.Hash}}&#34;</span>&gt;{{$.Page.Lastmod}}&lt;/<span style=color:#f92672>a</span>&gt;
+  &lt;/<span style=color:#f92672>div</span>&gt;
 {{ end }}
-</code></pre>
-
-<p>と書きました。(<code>$.Page.Site.Params.repourl</code>にはGitHubのURLを入れています)</p>
-
-<h2 id="ハマったこと">ハマったこと</h2>
-
-<h3 id="コミットのない投稿のプレビューができない">コミットのない投稿のプレビューができない</h3>
-
-<p>新しく作った投稿にはコミットハッシュがないため、<code>.GitInfo</code>が取得できないというエラーが出て<code>hugo server</code>を利用したプレビューが表示されません。</p>
-
-<p>これを回避するために、<code>with .GitInfo</code> を追加して、<code>.GitInfo</code>がある場合のみ表示するようにしました。</p>
-
-<h3 id="wercker経由でのデプロイに失敗する">wercker経由でのデプロイに失敗する</h3>
-
-<p>このサイトは、werckerを利用してGitHub Pages上にデプロイしています。</p>
-
-<p>Hugoのビルドは、<a href="https://github.com/ArjenSchwarz/wercker-step-hugo-build"><code>arjen/hugo-build</code></a>を利用しています。</p>
-
-<p><code>.GitInfo</code> を利用するにあたって、<code>gitinfo.go:39: Got error reading Git log: Git executable not found in $PATH</code> という<a href="https://app.wercker.com/kimihito/til/runs/ci/59cdfc828e888f0001ad3626?step=59cdfc89af52880001c287f9">エラーが出ていました</a>。</p>
-
-<p>解決方法としては、</p>
-
-<pre><code class="language-yaml">  steps:
+</code></pre></div><p>と書きました。(<code>$.Page.Site.Params.repourl</code>にはGitHubのURLを入れています)</p><h2 id=ハマったこと>ハマったこと</h2><h3 id=コミットのない投稿のプレビューができない>コミットのない投稿のプレビューができない</h3><p>新しく作った投稿にはコミットハッシュがないため、<code>.GitInfo</code>が取得できないというエラーが出て<code>hugo server</code>を利用したプレビューが表示されません。</p><p>これを回避するために、<code>with .GitInfo</code> を追加して、<code>.GitInfo</code>がある場合のみ表示するようにしました。</p><h3 id=wercker経由でのデプロイに失敗する>wercker経由でのデプロイに失敗する</h3><p>このサイトは、werckerを利用してGitHub Pages上にデプロイしています。</p><p>Hugoのビルドは、<a href=https://github.com/ArjenSchwarz/wercker-step-hugo-build><code>arjen/hugo-build</code></a>を利用しています。</p><p><code>.GitInfo</code> を利用するにあたって、<code>gitinfo.go:39: Got error reading Git log: Git executable not found in $PATH</code> という<a href="https://app.wercker.com/kimihito/til/runs/ci/59cdfc828e888f0001ad3626?step=59cdfc89af52880001c287f9">エラーが出ていました</a>。</p><p>解決方法としては、</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>  steps:
     - install-packages:
         packages: git
     - arjen/hugo-build:
-        version: &quot;0.18&quot;
+        version: <span style=color:#e6db74>&#34;0.18&#34;</span>
         theme: hemingway
-        flags: --buildDrafts=true
-</code></pre>
-
-<p>というように、<code>arjen/hugo-build</code>を利用する前に<code>git</code>をインストールすることで対処できました。</p>
-
-    </div>
-    <hr />
-    
-      <h3 class="subtitle is-6">最終更新日</h3>
-      <div class="content">
-        <a href="https://github.com/kimihito/til//commit/aa90fcfe48b20948cdd099885d0a3402a7a918d3">2017-09-30 21:32:39 &#43;0900 &#43;0900</a>
-      </div>
-    
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container has-text-centered">
-    <p>&copy; <a href="https://kimihito.net/">kimihito</a> 2018</p>
-  </div>
-</section>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/go.min.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/dockerfile.min.js"></script>
-
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/ruby.min.js"></script>
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-
+        flags: --buildDrafts=<span style=color:#66d9ef>true</span>
+</code></pre></div><p>というように、<code>arjen/hugo-build</code>を利用する前に<code>git</code>をインストールすることで対処できました。</p></div><hr><h3 class="subtitle is-6">最終更新日</h3><div class=content><a href=https://github.com/kimihito/til//commit/aa90fcfe48b20948cdd099885d0a3402a7a918d3>2017-09-30 21:32:39 +0900 +0900</a></div></div></section><section class=section><div class="container has-text-centered"><p>&copy; <a href=https://kimihito.net/>kimihito</a> 2018</p></div></section><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/go.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/dockerfile.min.js></script><script type=text/javascript src=//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/languages/ruby.min.js></script><script>hljs.initHighlightingOnLoad();</script>
